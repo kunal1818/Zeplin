@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/match_wrap"
+        android:orientation="horizontal"
+        android:background="@color/search_bar_background"
+        android:padding="@dimen/margin_search_layout">
+        <EditText
+            android:layout_weight="1"
+            style="@style/et_search_layout"
+            android:drawableLeft="@drawable/search_icon"
+            android:hint="@string/search_bar"
+            android:background="@drawable/search_bar_layout"
+
+            />
+        <ImageView
+            style="@style/wrap_content"
+            android:src="@drawable/info_icon"/>
+    </LinearLayout>

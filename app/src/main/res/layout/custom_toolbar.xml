@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_wrap"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_discover"
+        style="@style/custom_toolbar_textview"
+        android:drawableTop="@drawable/discover_icon"
+        android:text="@string/discover" />
+
+    <TextView
+        android:id="@+id/tv_map"
+        style="@style/custom_toolbar_textview"
+        android:drawableTop="@drawable/map"
+        android:text="@string/map" />
+
+    <TextView
+        android:id="@+id/tv_myPost"
+        style="@style/custom_toolbar_textview"
+        android:drawableTop="@drawable/my_post"
+        android:text="@string/my_post" />
+
+    <TextView
+        android:id="@+id/tv_request"
+        style="@style/custom_toolbar_textview"
+        android:drawableTop="@drawable/request"
+        android:text="@string/request" />
+
+    <TextView
+        android:id="@+id/tv_myNetwork"
+        style="@style/custom_toolbar_textview"
+        android:drawableTop="@drawable/my_network"
+        android:text="@string/my_network" />
+
+
+</LinearLayout>
