@@ -4,7 +4,9 @@
     <color name="colorPrimaryDark">#58bdb8</color>
     <color name="colorAccent">#FF4081</color>
     <color name="text_color">#fff</color>
-    <color name="search_bar_background">#eee</color>
+    <color name="search_bar_background">#f3f3f3</color>
+    <color name="black">#030303</color>
+    <color name="border_color">#ff000000</color>
 
 
 </resources>

@@ -3,21 +3,15 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvParis"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/match_wrap"
     android:layout_gravity="center"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp"
     card_view:cardCornerRadius="4dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <RelativeLayout style="@style/match_parent">
 
             <ImageView
                 android:id="@+id/imgParis"
@@ -56,8 +50,7 @@
             </RelativeLayout>
 
             <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/wrap_content"
                 android:layout_alignBottom="@id/imgParis"
                 android:layout_alignEnd="@id/imgParis"
                 android:padding="12dp">
@@ -76,15 +69,13 @@
             </FrameLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/match_wrap"
                 android:layout_below="@id/imgParis"
                 android:orientation="vertical"
                 android:padding="5dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/match_wrap"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -93,16 +84,12 @@
                         android:src="@drawable/add_image_icon" />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:orientation="vertical"
-                        android:paddingEnd="0dp"
-                        android:paddingStart="0dp">
+                        android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/wrap_content"
                             android:text="John"
                             android:textColor="#111" />
 
@@ -140,8 +127,7 @@
 
                 <TextView
                     android:id="@+id/tvTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/match_wrap"
                     android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."
                     android:textColor="#111" />
             </LinearLayout>

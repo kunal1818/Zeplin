@@ -6,5 +6,12 @@
     <string name="request">Requests</string>
     <string name="my_network">My Network</string>
     <string name="search_bar">  Where do you like to connect?</string>
-
+    <string name="name_sidemenu">John</string>
+    <string name="place_sidemenu">Paris</string>
+    <string name="home">Home</string>
+    <string name="Cards_sub">Cards/Subscription</string>
+    <string name="support">Support</string>
+    <string name="request_sidemenu">My Request</string>
+    <string name="share">Share</string>
+    <string name="logout">Log out</string>
 </resources>

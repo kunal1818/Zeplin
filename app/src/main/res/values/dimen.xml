@@ -46,8 +46,21 @@
     <dimen name="padiing_right_of_header">40dp</dimen>
     <dimen name="margin_top_of_header">12dp</dimen>
     <dimen name="margin_bottom_of_custom_layout">8dp</dimen>
-    <dimen name ="search_layout">20dp</dimen>
+    <dimen name="search_layout">20dp</dimen>
     <dimen name="search_layout_width">1dp</dimen>
     <dimen name="margin_search_layout">4dp</dimen>
     <dimen name="padding_search_layout">4dp</dimen>
+    <!--side menu-->
+    <dimen name="top_textview_size">90dp</dimen>
+    <dimen name="margin_bottom_paris">50dp</dimen>
+    <dimen name="padding_left">30dp</dimen>
+    <dimen name="margin_top">60dp</dimen>
+    <dimen name="padding_upDown">7dp</dimen>
+    <dimen name="padding_start">20dp</dimen>
+    <dimen name="padding_end">5dp</dimen>
+    <dimen name="margin_top_bottomlinear">30dp</dimen>
+    <dimen name="framelayout_margin_top">35dp</dimen>
+    <!--side menu circular image-->
+    <dimen name="heightWidth">96dp</dimen>
+    <dimen name="borderWidth">2dp</dimen>
 </resources>
