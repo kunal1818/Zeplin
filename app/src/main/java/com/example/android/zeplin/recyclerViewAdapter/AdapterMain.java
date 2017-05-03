@@ -11,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.android.zeplin.R;
 import com.example.android.zeplin.modelClass.ModelClass;
-
 import java.util.ArrayList;
 
 /**
