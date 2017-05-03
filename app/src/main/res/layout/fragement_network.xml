@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_network"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_medium"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/paris" />
+
+    <TextView
+        android:id="@+id/tv_nameNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/profile_img"
+        android:text="@string/evelyn"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nameNet"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_toEndOf="@id/profile_img"
+        android:drawablePadding="@dimen/spacing_very_tiny"
+        android:drawableStart="@drawable/icon_location"
+        android:text="@string/place_sidemenu"
+        android:textSize="@dimen/font_small" />
+
+
+    <RatingBar
+        android:id="@+id/ratingbarnetwork"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:numStars="5"
+        android:rating="4.5" />
+
+    <TextView
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/ratingbarnetwork"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:background="@drawable/circular_button"
+        android:padding="@dimen/spacing_small"
+        android:text="Connect"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_connect"
+        android:background="#B33a4245" />
+
+
+</RelativeLayout>

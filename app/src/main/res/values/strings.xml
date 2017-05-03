@@ -14,4 +14,6 @@
     <string name="request_sidemenu">My Request</string>
     <string name="share">Share</string>
     <string name="logout">Log out</string>
+    <string name="connect">Connect</string>
+    <string name="evelyn">Evelyn</string>
 </resources>

@@ -102,4 +102,9 @@
         <item name="civ_border_color">@color/border_color</item>
         <item name="civ_border_width">@dimen/borderWidth</item>
     </style>
+
+    <style name="circularImageNetwork">
+        <item name="android:layout_height">@dimen/heightWidth</item>
+        <item name="android:layout_width">@dimen/heightWidth</item>
+    </style>
 </resources>

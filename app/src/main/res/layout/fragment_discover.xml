@@ -5,11 +5,14 @@
     android:id="@+id/cvParis"
     style="@style/match_wrap"
     android:layout_gravity="center"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    >
 
     <LinearLayout
         style="@style/match_parent"
         android:orientation="vertical">
+
+
 
         <RelativeLayout style="@style/match_parent">
 

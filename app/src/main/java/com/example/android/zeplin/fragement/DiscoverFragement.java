@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.android.zeplin.R;
-import com.example.android.zeplin.modelDiscover.ModelDiscover;
-import com.example.android.zeplin.recyclerViewAdapter.DiscoverAdapter;
+import com.example.android.zeplin.modelClass.ModelClass;
+import com.example.android.zeplin.recyclerViewAdapter.AdapterMain;
 
 import java.util.ArrayList;
 
@@ -20,20 +20,37 @@ import java.util.ArrayList;
  */
 
 public class DiscoverFragement extends Fragment {
-    private ArrayList<ModelDiscover> modelDiscoverArrayList = new ArrayList<ModelDiscover>();
+    private static final int MODE = 0;
+    private ArrayList<ModelClass> modelClassArrayList = new ArrayList<ModelClass>();
     private RecyclerView recyclerView;
+    private int flag = 0;
 
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.recycle_view_discover, container, false);
-        ModelDiscover modelClass = new ModelDiscover(R.drawable.paris, "Lorem ipsum dolor sit "
-                + "amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum");
-        modelDiscoverArrayList.add(modelClass);
-        DiscoverAdapter discoverAdapter = new DiscoverAdapter(modelDiscoverArrayList);
+
+        if (flag == 0) {
+            ModelClass modelClass = new ModelClass(R.drawable.paris, "Lorem ipsum dolor sit "
+                    + "amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum");
+            modelClassArrayList.add(modelClass);
+
+            ModelClass modelClass1 = new ModelClass(R.drawable.paris, "Lorem ipsum dolor sit "
+                    + "amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum");
+            modelClassArrayList.add(modelClass1);
+
+            ModelClass modelClass2 = new ModelClass(R.drawable.paris, "Lorem ipsum dolor sit "
+                    + "amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum");
+            modelClassArrayList.add(modelClass2);
+
+            flag = 1;
+        }
+
+
+        AdapterMain adapterMain = new AdapterMain(modelClassArrayList, MODE);
         recyclerView = (RecyclerView) view.findViewById(R.id.rvItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(discoverAdapter);
+        recyclerView.setAdapter(adapterMain);
         recyclerView.setHasFixedSize(true);
 
         return view;
