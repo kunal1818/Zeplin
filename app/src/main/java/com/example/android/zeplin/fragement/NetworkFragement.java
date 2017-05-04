@@ -9,8 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.android.zeplin.R;
 import com.example.android.zeplin.modelClass.ModelClass;
@@ -24,11 +22,9 @@ import java.util.ArrayList;
 
 public class NetworkFragement extends Fragment {
     private static final int MODE = 1;
-    private TextView tvHead;
     private int flag = 0;
     private ArrayList<ModelClass> modelClassArrayList = new ArrayList<ModelClass>();
     private RecyclerView recyclerView;
-    private LinearLayout linearLayout;
 
 
     @Nullable
@@ -36,14 +32,10 @@ public class NetworkFragement extends Fragment {
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.recycle_view_discover, container, false);
         Log.e("erroe", "getValue1");
-        //tvHead = (TextView) view.findViewById(R.id.tv_header);
-        //  tvHead.setText("My Network");
-
-        linearLayout = (LinearLayout) view.findViewById(R.id.ll_search_layout);
 
 
         if (flag == 0) {
-//            linearLayout.setVisibility(View.GONE);
+
             for (int i = 0; i < 6; i++) {
                 ModelClass modelClass = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
                 modelClassArrayList.add(modelClass);

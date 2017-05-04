@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.example.android.zeplin.R;
 import com.example.android.zeplin.modelClass.ModelClass;
+
 import java.util.ArrayList;
 
 /**
@@ -40,8 +42,10 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         View view;
         if (mode == 0) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_discover, parent, false);
-        } else {
+        } else if (mode == 1) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragement_network, parent, false);
+        } else {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragement_post, parent, false);
         }
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -57,7 +61,7 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             TextView tvTitle1 = tvTitle;
             tvTitle1.setText(objdiscover.getText());
-        } else {
+        } else if (mode == 1) {
 
             ImageView imageNetw = imageViewNetwork;
             imageNetw.setImageResource(objdiscover.getImageNetwork());
@@ -67,7 +71,14 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             TextView textViewname = tvname;
             textViewname.setText(objdiscover.getName());
+        } else {
+            ImageView imgParis = imageView;
+            imgParis.setImageResource(objdiscover.getImg());
+
+            TextView tvTitle1 = tvTitle;
+            tvTitle1.setText(objdiscover.getText());
         }
+
     }
 
     @Override
@@ -80,7 +91,7 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      */
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private CardView cvDiscover;
+        private CardView cvDiscover, cvMyPost;
         private RelativeLayout relativeLayout;
 
         /**
@@ -97,12 +108,16 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
 //                cvDiscover.setVisibility(View.GONE);
 
-            } else {
+            } else if (mode == 1) {
                 imageViewNetwork = (ImageView) itemView.findViewById(R.id.profile_img);
                 tvplace = (TextView) itemView.findViewById(R.id.placeName);
                 tvname = (TextView) itemView.findViewById(R.id.tv_nameNet);
                 relativeLayout = (RelativeLayout) itemView.findViewById(R.id.rl_network);
 //                relativeLayout.setVisibility(View.GONE);
+            } else {
+                cvMyPost = (CardView) itemView.findViewById(R.id.cvMyPost);
+                imageView = (ImageView) itemView.findViewById(R.id.imgParisPost);
+                tvTitle = (TextView) itemView.findViewById(R.id.tv_titleparis);
             }
 
         }

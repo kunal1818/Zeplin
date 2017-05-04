@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_bar_layout"
+        style="@style/match_wrap"
+        android:background="@color/search_bar_background"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_search_layout">
+
+        <EditText
+            style="@style/et_search_layout"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_layout"
+            android:drawableLeft="@drawable/location_icon_small_2"
+            android:hint="Location" />
+
+
+    </LinearLayout>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:cameraBearing="112.5"
+        map:cameraTargetLat="-33.796923"
+        map:cameraTargetLng="150.922433"
+        map:cameraTilt="30"
+        map:cameraZoom="13"
+        map:mapType="normal"
+        map:uiCompass="false"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="false"
+        map:uiZoomGestures="true" />
+
+</LinearLayout>

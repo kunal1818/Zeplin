@@ -16,4 +16,8 @@
     <string name="logout">Log out</string>
     <string name="connect">Connect</string>
     <string name="evelyn">Evelyn</string>
+    <string name="ok">OK</string>
+    <string name="title_location_permission">GPS Permission</string>
+    <string name="text_location_permission">GPS is required to be enabled for this section to get your location</string>
+    <string name="google_maps_api_key">AIzaSyCEp9nmNjLTPTDcSG_8F1IZvqVjBNfAT1o</string>
 </resources>
