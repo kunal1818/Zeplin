@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_bar_background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_left">
+
+    <RelativeLayout
+        android:id="@+id/btn_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/btn_Maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_button"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Map"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btn_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_Maps"
+            android:background="@drawable/newtwork_connect"
+            android:backgroundTint="@color/text_color"
+            android:text="Posts"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+        <Button
+            android:id="@+id/btn_Networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/btn_Maps"
+            android:background="@drawable/right_curve"
+            android:backgroundTint="@color/text_color"
+            android:text="Network"
+            android:textColor="@color/colorPrimaryDark" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_row"
+        android:background="@color/text_color"
+        android:padding="@dimen/default_padding_top">
+
+        <LinearLayout
+            android:id="@+id/ll_johnStar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="100dp">
+
+            <TextView
+                android:id="@+id/tv_john"
+                style="@style/wrap_content"
+                android:text="John"
+                android:textSize="@dimen/font_large" />
+
+            <RatingBar
+                android:id="@+id/ratingbarnetwork"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_peterStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_johnStar"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/wrap_content"
+                android:layout_below="@+id/ll_johnStar"
+                android:drawableLeft="@drawable/location_icon_small"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:text="1097, St. Peter Street,"
+                android:textSize="@dimen/font_large" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/ll_johnStar"
+                android:layout_toRightOf="@id/ll_peterStreet"
+                android:background="@drawable/newtwork_connect"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="Show On Map"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ca"
+            style="@style/wrap_content"
+            android:layout_below="@id/ll_peterStreet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-5dp"
+            android:text="CA" />
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/match_wrap"
+            android:layout_below="@id/tv_ca"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/time_icon_small"
+            android:text="6d 2h left" />
+
+        <TextView
+            android:id="@+id/tv_textstart"
+            style="@style/match_wrap"
+            android:layout_below="@id/tv_date"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/reviewa_icon_small"
+            android:text="Lorem ipsum is just the dummy"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:id="@+id/tv_textend"
+            style="@style/match_wrap"
+            android:layout_below="@id/tv_textstart"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="30dp"
+            android:text="text used in print typeseting."
+            android:textSize="@dimen/font_large"
+
+            />
+    </RelativeLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circular_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/rl_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/paris" />
+
+</RelativeLayout>

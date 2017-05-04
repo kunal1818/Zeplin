@@ -8,6 +8,7 @@
     <color name="black">#030303</color>
     <color name="border_color">#ff000000</color>
     <color name="star_color">#FFD700</color>
+    <color name="dark_grey">#4545</color>
 
 
 </resources>

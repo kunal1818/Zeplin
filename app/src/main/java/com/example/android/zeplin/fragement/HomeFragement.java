@@ -25,12 +25,13 @@ public class HomeFragement extends Fragment {
     private View view;
     private TextView tvHead;
 
+
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragement_home, container, false);
         final ViewPager vP = (ViewPager) view.findViewById(R.id.viewPager);
-
+        vP.setOffscreenPageLimit(5);
         vP.setAdapter(new MyPagerAdapter(getChildFragmentManager()));
 
         tvdiscover = (TextView) view.findViewById(R.id.tv_discover);

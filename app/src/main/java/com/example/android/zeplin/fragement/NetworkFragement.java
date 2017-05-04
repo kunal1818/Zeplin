@@ -30,22 +30,28 @@ public class NetworkFragement extends Fragment {
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.recycle_view_discover, container, false);
+        View view = inflater.inflate(R.layout.recycler_view_network, container, false);
         Log.e("erroe", "getValue1");
 
 
         if (flag == 0) {
 
-            for (int i = 0; i < 6; i++) {
-                ModelClass modelClass = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
-                modelClassArrayList.add(modelClass);
-                ModelClass modelClass1 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
-                modelClassArrayList.add(modelClass1);
-                ModelClass modelClass2 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
-                modelClassArrayList.add(modelClass2);
 
-                flag = 1;
-            }
+            ModelClass modelClass = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass);
+            ModelClass modelClass1 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass1);
+            ModelClass modelClass2 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass2);
+            ModelClass modelClass3 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass3);
+            ModelClass modelClass4 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass4);
+            ModelClass modelClass5 = new ModelClass(R.drawable.paris, "Paris", "Evelyn");
+            modelClassArrayList.add(modelClass5);
+
+            flag = 1;
+
         }
         AdapterMain adapterMain = new AdapterMain(modelClassArrayList, MODE);
         recyclerView = (RecyclerView) view.findViewById(R.id.rvItems);

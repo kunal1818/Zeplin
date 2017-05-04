@@ -27,6 +27,9 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ImageView imageViewNetwork;
     private TextView tvplace;
     private TextView tvname;
+    private TextView tvTextEnd;
+    private TextView tvTextStart;
+
 
     /**
      * @param modelClassArrayList array list is created
@@ -44,8 +47,10 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_discover, parent, false);
         } else if (mode == 1) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragement_network, parent, false);
-        } else {
+        } else if (mode == 2) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragement_post, parent, false);
+        } else {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragement_request, parent, false);
         }
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -71,12 +76,25 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             TextView textViewname = tvname;
             textViewname.setText(objdiscover.getName());
+        } else if (mode == 2) {
+            ImageView imgParis = imageView;
+            imgParis.setImageResource(objdiscover.getImg());
+
+            TextView tvTitle1 = tvTitle;
+            tvTitle1.setText(objdiscover.getText());
         } else {
             ImageView imgParis = imageView;
             imgParis.setImageResource(objdiscover.getImg());
 
             TextView tvTitle1 = tvTitle;
             tvTitle1.setText(objdiscover.getText());
+
+            TextView textView = tvTextStart;
+            textView.setText(objdiscover.getText());
+
+            TextView textViewend = tvTextEnd;
+            textViewend.setText(objdiscover.getText());
+
         }
 
     }
@@ -114,12 +132,16 @@ public class AdapterMain extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 tvname = (TextView) itemView.findViewById(R.id.tv_nameNet);
                 relativeLayout = (RelativeLayout) itemView.findViewById(R.id.rl_network);
 //                relativeLayout.setVisibility(View.GONE);
-            } else {
+            } else if (mode == 2) {
                 cvMyPost = (CardView) itemView.findViewById(R.id.cvMyPost);
                 imageView = (ImageView) itemView.findViewById(R.id.imgParisPost);
                 tvTitle = (TextView) itemView.findViewById(R.id.tv_titleparis);
+            } else {
+                imageView = (ImageView) itemView.findViewById(R.id.circular_img);
+                tvTitle = (TextView) itemView.findViewById(R.id.tv_john);
+                tvTextStart = (TextView) itemView.findViewById(R.id.tv_textstart);
+                tvTextEnd = (TextView) itemView.findViewById(R.id.tv_textend);
             }
-
         }
     }
 }

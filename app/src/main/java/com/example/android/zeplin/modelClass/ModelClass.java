@@ -25,6 +25,8 @@ public class ModelClass implements Parcelable {
     private int imageNetwork;
     private String place;
     private String name;
+    private String textstart;
+    private String textend;
 
 
     /**
@@ -37,16 +39,32 @@ public class ModelClass implements Parcelable {
         imageNetwork = in.readInt();
         place = in.readString();
         name = in.readString();
+        textstart = in.readString();
+        textend = in.readString();
     }
 
     /**
-     * @param image image is passed in constructor
+     * @param image image is passed in constructor for Discover
      * @param text  text  is passed in constructor
      */
     public ModelClass(final int image, final String text) {
         this.img = image;
         this.text = text;
 
+    }
+
+
+    /**
+     * @param image     image is send for Request
+     * @param name      name is send for Request
+     * @param textstart text start is send for Request
+     * @param textend   text end is send for Request
+     */
+    public ModelClass(final int image, final String name, final String textstart, final String textend) {
+        this.img = image;
+        this.name = name;
+        this.textstart = textstart;
+        this.textend = textend;
     }
 
     /**
@@ -107,6 +125,20 @@ public class ModelClass implements Parcelable {
         return name;
     }
 
+    /**
+     * @return text start
+     */
+    public String getTextstart() {
+        return textstart;
+    }
+
+    /**
+     * @return text end;
+     */
+    public String getTextend() {
+        return textend;
+    }
+
 
     /**
      * @param dest  write values here
@@ -119,6 +151,8 @@ public class ModelClass implements Parcelable {
         dest.writeInt(imageNetwork);
         dest.writeString(place);
         dest.writeString(name);
+        dest.writeString(textstart);
+        dest.writeString(textend);
     }
 
 
