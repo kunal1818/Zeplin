@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,10 +57,7 @@ public class HomeFragement extends Fragment {
                 tvHead.setText("Map");
                 linearLayout = (LinearLayout) view.findViewById(R.id.ll_search_layout);
                 linearLayout.setVisibility(View.GONE);
-                FragmentManager fm = getChildFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.framelayout, new MapFragement());
-                ft.commit();
+
 
             }
         });
