@@ -17,38 +17,30 @@
             <ImageView
                 android:id="@+id/imgParisPost"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="@dimen/imageViewHeight"
                 android:scaleType="centerCrop"
                 android:src="@drawable/paris" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="#65111111"
+                android:layout_height="@dimen/heightRelative"
+                android:background="@color/background_rl"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_titleparis"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview_rl_post"
                     android:layout_alignParentStart="true"
-                    android:layout_gravity="center"
-                    android:padding="5dp"
-                    android:text="Explore Paris"
-                    android:textColor="@color/text_color"
-                    android:textSize="17sp" />
+                    android:text="@string/explore"
+                    android:textSize="@dimen/font_large" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview_rl_post"
                     android:layout_alignParentEnd="true"
-                    android:layout_gravity="center"
                     android:drawableEnd="@drawable/icon_trash"
-                    android:drawablePadding="5dp"
+                    android:drawablePadding="@dimen/drawablePadding"
                     android:drawableStart="@drawable/icon_edit"
-                    android:padding="5dp"
-                    android:paddingEnd="15dp"
-                    android:textColor="@color/text_color" />
+                    android:paddingEnd="@dimen/paddingEnd" />
             </RelativeLayout>
 
 
@@ -56,7 +48,7 @@
                 style="@style/wrap_content"
                 android:layout_alignBottom="@id/imgParisPost"
                 android:layout_alignStart="@id/imgParisPost"
-                android:layout_margin="12dp"
+                android:layout_margin="@dimen/switch_margin"
                 android:background="@drawable/search_bar_layout"
                 android:backgroundTint="@color/colorPrimaryDark" />
 
@@ -72,8 +64,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
+                        style="@style/image_post"
                         android:src="@drawable/add_image_icon" />
 
                     <LinearLayout
@@ -83,8 +74,8 @@
 
                         <TextView
                             style="@style/wrap_content"
-                            android:text="John"
-                            android:textColor="#111" />
+                            android:text="@string/john"
+                            android:textColor="@color/black" />
 
                         <RatingBar
                             style="?android:attr/ratingBarStyleSmall"
@@ -96,33 +87,23 @@
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/textview_post_below"
                         android:drawableStart="@drawable/time_1"
-                        android:gravity="center"
-                        android:paddingEnd="0dp"
-                        android:paddingStart="8dp"
-                        android:text="6d 2h left"
-                        android:textColor="#111"
-                        android:textSize="12sp" />
+                        android:paddingStart="@dimen/tv_time_padding"
+                        android:text="@string/timing" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/textview_post_below"
                         android:drawableStart="@drawable/reviews"
-                        android:gravity="center"
-                        android:paddingEnd="0dp"
-                        android:paddingStart="15dp"
-                        android:text="222 Reviews"
-                        android:textColor="#111"
-                        android:textSize="12sp" />
+                        android:paddingStart="@dimen/tv_review_padding"
+                        android:text="@string/review" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvTitle"
                     style="@style/match_wrap"
-                    android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."
-                    android:textColor="#111" />
+                    android:text="@string/titletext"
+                    android:textColor="@color/black" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

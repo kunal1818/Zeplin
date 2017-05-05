@@ -107,4 +107,57 @@
         <item name="android:layout_height">@dimen/heightWidth</item>
         <item name="android:layout_width">@dimen/heightWidth</item>
     </style>
+
+    <style name="circularImg_network">
+        <item name="android:layout_width">@dimen/width</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:layout_marginStart">@dimen/marginstartNet</item>
+    </style>
+
+    <style name="textview_network">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/marginstartNet</item>
+    </style>
+
+
+    <style name="textview_network_below">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/marginstartText</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:layout_marginTop">@dimen/spacing_tiny</item>
+    </style>
+
+    <style name="textview_rl_post">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="image_post">
+        <item name="android:layout_width">@dimen/image_height_width</item>
+
+        <item name="android:layout_height">@dimen/image_height_width</item>
+    </style>
+
+    <style name="textview_post_below">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="recycler_network_frame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_normal</item>
+        <item name="android:layout_marginRight">@dimen/spacing_normal</item>
+        <item name="android:layout_marginTop">@dimen/spacing_normal</item>
+    </style>
 </resources>

@@ -9,6 +9,8 @@
     <color name="border_color">#ff000000</color>
     <color name="star_color">#FFD700</color>
     <color name="dark_grey">#4545</color>
+    <color name="backgroun_network">#B33a4245</color>
+    <color name="background_rl">#65111111</color>
 
 
 </resources>

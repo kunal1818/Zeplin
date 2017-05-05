@@ -63,4 +63,28 @@
     <!--side menu circular image-->
     <dimen name="heightWidth">96dp</dimen>
     <dimen name="borderWidth">2dp</dimen>
+    <!--Network fragement-->
+    <!--circular image-->
+    <dimen name="width">50dp</dimen>
+    <dimen name="height">50dp</dimen>
+    <dimen name="marginstartNet">10dp</dimen>
+    <!--textview-->
+    <dimen name="marginstartText">10dp</dimen>
+    <!-- view-->
+    <dimen name="heightView">1dp</dimen>
+
+    <!--Post fragement-->
+    <dimen name="imageViewHeight">250dp</dimen>
+    <dimen name="heightRelative">30dp</dimen>
+    <dimen name="drawablePadding">5dp</dimen>
+    <dimen name="paddingEnd">15dp</dimen>
+    <dimen name="switch_margin">12dp</dimen>
+    <dimen name="image_height_width">52dp</dimen>
+    <dimen name="tv_time_padding">8dp</dimen>
+    <dimen name="tv_review_padding">15dp</dimen>
+
+    <!---discover fragement-->
+    <dimen name="frame_padding">12dp</dimen>
+    <dimen name="cardview_radius">4dp</dimen>
+
 </resources>

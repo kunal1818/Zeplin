@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/match_parent"
     android:orientation="vertical">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/rl_network"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/match_wrap"
         android:layout_marginTop="@dimen/spacing_medium"
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_img"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
+            style="@style/circularImg_network"
             android:src="@drawable/paris" />
 
         <TextView
             android:id="@+id/tv_nameNet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            style="@style/textview_network"
             android:layout_toEndOf="@id/profile_img"
             android:text="@string/evelyn"
             android:textColor="@color/colorPrimary"
@@ -30,10 +24,8 @@
 
         <TextView
             android:id="@+id/placeName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textview_network"
             android:layout_below="@id/tv_nameNet"
-            android:layout_marginStart="@dimen/spacing_small"
             android:layout_toEndOf="@id/profile_img"
             android:drawablePadding="@dimen/spacing_very_tiny"
             android:drawableStart="@drawable/icon_location"
@@ -52,23 +44,17 @@
 
         <TextView
             android:id="@+id/btn_connect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/textview_network_below"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/ratingbarnetwork"
-            android:layout_marginBottom="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_tiny"
             android:background="@drawable/circular_button"
-            android:padding="@dimen/spacing_small"
-            android:text="Connect"
-            android:textColor="#fff"
-            android:textSize="@dimen/font_normal" />
+            android:text="@string/connect" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/heightView"
             android:layout_below="@id/btn_connect"
-            android:background="#B33a4245" />
+            android:background="@color/backgroun_network" />
 
 
     </RelativeLayout>

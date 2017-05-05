@@ -5,13 +5,11 @@
     android:id="@+id/cvParis"
     style="@style/match_wrap"
     android:layout_gravity="center"
-    card_view:cardCornerRadius="4dp"
-    >
+    card_view:cardCornerRadius="@dimen/cardview_radius">
 
     <LinearLayout
         style="@style/match_parent"
         android:orientation="vertical">
-
 
 
         <RelativeLayout style="@style/match_parent">
@@ -19,55 +17,47 @@
             <ImageView
                 android:id="@+id/imgParis"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="@dimen/imageViewHeight"
                 android:scaleType="centerCrop"
                 android:src="@drawable/paris" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="#65111111"
+                android:layout_height="@dimen/heightRelative"
+                android:background="@color/background_rl"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview_rl_post"
                     android:layout_alignParentStart="true"
-                    android:layout_gravity="center"
-                    android:padding="5dp"
-                    android:text="Explore Paris"
-                    android:textColor="@color/text_color"
-                    android:textSize="17sp" />
+                    android:padding="@dimen/padding_end"
+                    android:text="@string/explore"
+                    android:textSize="@dimen/font_large" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview_rl_post"
                     android:layout_alignParentEnd="true"
-                    android:layout_gravity="center"
                     android:drawablePadding="5dp"
                     android:drawableStart="@drawable/location_icon"
-                    android:padding="5dp"
-                    android:paddingEnd="15dp"
-                    android:text="Paris"
-                    android:textColor="@color/text_color" />
+                    android:padding="@dimen/drawablePadding"
+                    android:paddingEnd="@dimen/paddingEnd"
+                    android:text="@string/place_sidemenu" />
             </RelativeLayout>
 
             <FrameLayout
                 style="@style/wrap_content"
                 android:layout_alignBottom="@id/imgParis"
                 android:layout_alignEnd="@id/imgParis"
-                android:padding="12dp">
+                android:padding="@dimen/frame_padding">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/wrap_content"
                     android:src="@drawable/send_button" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/wrap_content"
                     android:layout_gravity="center"
-                    android:text="Send Request"
+                    android:text="@string/send_req"
                     android:textColor="@color/text_color" />
             </FrameLayout>
 
@@ -75,15 +65,14 @@
                 style="@style/match_wrap"
                 android:layout_below="@id/imgParis"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="@dimen/padding_end">
 
                 <LinearLayout
                     style="@style/match_wrap"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
+                        style="@style/image_post"
                         android:src="@drawable/add_image_icon" />
 
                     <LinearLayout
@@ -93,8 +82,8 @@
 
                         <TextView
                             style="@style/wrap_content"
-                            android:text="John"
-                            android:textColor="#111" />
+                            android:text="@string/john"
+                            android:textColor="@color/black" />
 
                         <RatingBar
                             style="?android:attr/ratingBarStyleSmall"
@@ -106,33 +95,23 @@
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/textview_post_below"
                         android:drawableStart="@drawable/time_1"
-                        android:gravity="center"
-                        android:paddingEnd="0dp"
-                        android:paddingStart="8dp"
-                        android:text="6d 2h left"
-                        android:textColor="#111"
-                        android:textSize="12sp" />
+                        android:paddingStart="@dimen/tv_time_padding"
+                        android:text="@string/timing" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/textview_post_below"
                         android:drawableStart="@drawable/reviews"
-                        android:gravity="center"
-                        android:paddingEnd="0dp"
-                        android:paddingStart="15dp"
-                        android:text="222 Reviews"
-                        android:textColor="#111"
-                        android:textSize="12sp" />
+                        android:paddingStart="@dimen/tv_review_padding"
+                        android:text="@string/review" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvTitle"
                     style="@style/match_wrap"
-                    android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."
-                    android:textColor="#111" />
+                    android:text="@string/titletext"
+                    android:textColor="@color/black" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
